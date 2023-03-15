@@ -1,0 +1,38 @@
+{
+  "name": "belajar-unittest",
+  "version": "1.0.0",
+  "description": "Belajar NodeJS Unit Test",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "type": "module",
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js, jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ]
+  },
+  "author": "denihandoko",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^29.4.3",
+    "jest": "^29.4.3"
+  }
+}
